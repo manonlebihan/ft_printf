@@ -6,7 +6,13 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:49:31 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/21 15:49:32 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/22 16:03:44 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
