@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:18:36 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/16 15:02:22 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/16 15:05:53 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putchar(char c)
 	return (1);
 }
 
-void	ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 		write(1, "-2147483648", 11);
@@ -39,4 +39,5 @@ void	ft_putnbr(int n)
 			ft_putnbr(n % 10);
 		}
 	}
+	return (1);
 }
