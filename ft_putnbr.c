@@ -6,13 +6,13 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:18:36 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/16 15:05:53 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/17 12:37:18 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(int c)
 {
 	write(1, &c, 1);
 	return (1);

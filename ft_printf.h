@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:50:15 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/16 15:05:50 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/17 12:32:56 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 # define FT_PRINTF_H
 
 int		ft_printf(const char *s, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
+int		ft_putchar(int c);
 int		ft_putnbr(int n);
+int		ft_putstr(char *s);
+int		ft_putunsigned(unsigned int n);
 
 #endif

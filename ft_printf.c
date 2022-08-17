@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:00:39 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/16 15:06:30 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/17 12:41:34 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	ft_check_arg_type(char c, int size, va_list arg)
 		// ft_puthexadecimal*/
 	else if (c == 'd' || c == 'i')
 		size += ft_putnbr(va_arg(arg, int));
-	/*else if (c == 'u')
-		// ft_putnbr without negative numbers (and very high numbers)
-	else if (c == 'x')
-		// ft_puthexadecimal wit lowercase letters
+	else if (c == 'u')
+		size += ft_putunsigned(va_arg(arg, unsigned int));
+	/*else if (c == 'x')
+		// ft_puthexadecimal with lowercase letters
 	else if (c == 'X')
-		// ft_puthexadecimal wit uppercase letters
+		// ft_puthexadecimal with uppercase letters
 	else if (c == '%')
 		size += ft_putchar('%');*/
 	return (size);
