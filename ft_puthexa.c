@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 17:18:36 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/17 16:47:11 by mle-biha         ###   ########.fr       */
+/*   Created: 2022/08/17 14:23:12 by mle-biha          #+#    #+#             */
+/*   Updated: 2022/08/17 21:20:02 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,32 @@ int	ft_putchar(int c)
 	return (1);
 }
 
-int	ft_putnbr(int n)
+int	ft_puthexa(int nb, char *base)
 {
 	int	i;
 
 	i = 0;
-	if (n == -2147483648)
-		write(1, "-2147483648", 11);
-	else
+	if (nb < 0)
 	{
-		if (n < 0)
-		{
-			ft_putchar('-');
-			n *= -1;
-			i++;
-		}
-		if (n < 10)
-			i += ft_putchar('0' + n);
-		else
-		{
-			i += ft_putnbr(n / 10);
-			i += ft_putnbr(n % 10);
-		}
+		ft_putchar('-');
+		nb *= -1;
+		i++;
+	}
+	if (nb < 16)
+		i += ft_putchar(base[nb]);
+	else if (nb >= 16)
+	{
+		i += ft_puthexa(nb / 16, base);
+		i += ft_puthexa(nb % 16, base);
 	}
 	return (i);
+}
+
+int	main(int argc, char *argv[])
+{
+	if (argc == 3)
+	{
+		ft_puthexa(atoi(argv[1]), argv[2]);
+		ft_putchar('\n');
+	}
 }
