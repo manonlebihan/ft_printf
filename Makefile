@@ -6,7 +6,7 @@
 #    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/21 15:00:30 by mle-biha          #+#    #+#              #
-#    Updated: 2022/08/18 21:01:31 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/08/18 23:15:43 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,28 +16,28 @@ CFLAGS  = -Wall -Wextra -Werror -I. -g
 AR      = ar
 ARFLAGS = -cvq
 SRC     = ft_printf.c \
-            ft_putchar.c \
-            ft_puthexa.c \
-            ft_putnbr.c \
-            ft_putpointer.c \
-            ft_putstr.c \
-            ft_putunsigned.c \
+			ft_putchar.c \
+			ft_puthexa.c \
+			ft_putnbr.c \
+			ft_putpointer.c \
+			ft_putstr.c \
+			ft_putunsigned.c \
 
 OBJ     = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-    $(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 %.o: %.c %.h
-    $(CC) $(CFLAGS) $< -c -o $@
+	$(CC) $(CFLAGS) $< -c -o $@
 
 clean:
-    rm -f $(OBJ) $(BONUS_OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-    rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
