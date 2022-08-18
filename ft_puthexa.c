@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:23:12 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/17 21:20:02 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/18 11:05:54 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,11 @@ int	ft_putchar(int c)
 	return (1);
 }
 
-int	ft_puthexa(int nb, char *base)
+int	ft_puthexa(size_t nb, char *base)
 {
 	int	i;
 
 	i = 0;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-		i++;
-	}
 	if (nb < 16)
 		i += ft_putchar(base[nb]);
 	else if (nb >= 16)
@@ -41,9 +35,14 @@ int	ft_puthexa(int nb, char *base)
 
 int	main(int argc, char *argv[])
 {
+	int	v = -230299;
+
 	if (argc == 3)
 	{
+		printf("puthexa : \n");
 		ft_puthexa(atoi(argv[1]), argv[2]);
 		ft_putchar('\n');
+		printf("printf : \n");
+		printf("%X\n", v);
 	}
 }
