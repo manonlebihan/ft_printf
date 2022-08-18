@@ -6,17 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:18:36 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/17 16:47:11 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/18 21:01:52 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_putchar(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
 
 int	ft_putnbr(int n)
 {
