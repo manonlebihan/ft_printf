@@ -6,7 +6,7 @@
 #    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/21 15:00:30 by mle-biha          #+#    #+#              #
-#    Updated: 2022/08/18 23:15:43 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/08/18 23:18:35 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror -I. -g
 AR      = ar
 ARFLAGS = -cvq
-SRC     = ft_printf.c \
+SRC     = ft_check_arg_type.c \
+			ft_printf.c \
 			ft_putchar.c \
 			ft_puthexa.c \
 			ft_putnbr.c \
