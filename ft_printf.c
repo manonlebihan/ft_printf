@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:00:39 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/18 23:28:27 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/18 23:50:01 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] == '%')
 		{
-			size += ft_check_arg_type(s[i++], 0, args);
+			size += ft_check_arg_type(s[i + 1], 0, args);
 			i++;
 		}
 		else
 			size += ft_putchar(s[i]);
+			i++;
 		i++;
 	}
 	va_end(args);
@@ -38,11 +39,11 @@ int	ft_printf(const char *s, ...)
 
 /* int	main(void)
 {
-	char	c;
+	char	*c;
 
-	c = 'm';
+	c = "manon";
 	ft_putstr("PRINTF\n");
-	printf("%c", c);
+	printf("hello %s\n", c);
 	ft_putstr("FT_PRINTF\n");
-	ft_printf("%c", c);
+	ft_printf("hello %s\n", c);
 } */

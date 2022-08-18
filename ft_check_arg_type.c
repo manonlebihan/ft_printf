@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:34:08 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/18 23:29:00 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/18 23:53:19 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_check_arg_type(char c, int size, va_list arg)
 	else if (c == 's')
 		size += ft_putstr(va_arg(arg, char *));
 	else if (c == 'p')
-		size += ft_putpointer(arg);
+		size += ft_putpointer(arg, "0123456789abcdef");
 	else if (c == 'd' || c == 'i')
 		size += ft_putnbr(va_arg(arg, int));
 	else if (c == 'u')
