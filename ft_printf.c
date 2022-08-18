@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:00:39 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/18 12:10:27 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/18 13:07:13 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_printf(const char *s, ...)
 	va_list	args;
 
 	va_start(args, s);
+	// CODE HERE
 	va_end(args);
 }
 
