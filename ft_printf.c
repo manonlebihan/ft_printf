@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:00:39 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/19 12:16:30 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/19 12:44:32 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,20 @@ int	ft_printf(const char *s, ...)
 			i++;
 		}
 		else
-		{
 			size += ft_putchar(s[i]);
-			i++;
-		}
 		i++;
 	}
 	va_end(args);
 	return (size);
 }
 
-/* int	main(void)
+int	main(void)
 {
-	char	*c;
+	/* char	*c;
 
-	c = "manon";
+	c = "manon"; */
 	ft_putstr("PRINTF\n");
-	printf("hello %s\n", c);
+	printf(" %s %s %s %s %s \n", " - ", "", "4", "", "2 ");
 	ft_putstr("FT_PRINTF\n");
-	ft_printf("hello %s\n", c);
-} */
+	ft_printf(" %s %s %s %s %s \n", " - ", "", "4", "", "2 ");
+}
