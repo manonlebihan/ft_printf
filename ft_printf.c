@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:00:39 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/18 23:50:01 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/19 12:16:30 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ int	ft_printf(const char *s, ...)
 			i++;
 		}
 		else
+		{
 			size += ft_putchar(s[i]);
 			i++;
+		}
 		i++;
 	}
 	va_end(args);
