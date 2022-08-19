@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:08:53 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/08/19 12:41:42 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/08/19 14:38:26 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ int	ft_putstr(char *s)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		s = "(null)";
 	while (s[i])
 	{
 		ft_putchar(s[i]);
 		i++;
 	}
-	printf("--------------I EST EGAL A : %d--------------\n", i);
+	//ft_printf("--------------I EST EGAL A : %d--------------\n", i);
 	return (i);
 }
