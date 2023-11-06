@@ -5,6 +5,7 @@ Second 42 project : ft_printf
 The goal of this project was to code a printf function in C.
 
 ## Installation
+To use this project, you need to have a C compiler installed on your computer as well as git.
 To install this, you need to to clone the repository, then go into the folder and type the command `make`. 
 
 ## How to use
